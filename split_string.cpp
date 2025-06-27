@@ -15,7 +15,7 @@ void split_string(std::string text_input, std::vector<double>& Nums, std::vector
 	int cos = text_input.length();
 
 	for (int i = 0; i <= text_input.length(); i++) {
-		if (text_input[i] == '+' or text_input[i] == '-' or text_input[i] == '*' or text_input[i] == '/' or text_input.length() == i) {
+		if (text_input[i] == '+' or text_input[i] == '-' or text_input[i] == '*' or text_input[i] == '/' or text_input[i] == '^' or text_input.length() == i) {
 			if (text_input.length() != i)
 			{
 				Ops.push_back(text_input[i]);

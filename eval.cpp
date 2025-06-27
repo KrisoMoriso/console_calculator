@@ -2,11 +2,36 @@
 #include <time.h>
 #include "eval.h"
 #include <vector>
+#include <cmath>
 
 double eval(std::vector<double>& Nums, std::vector<char>& Ops) {
 
-
     bool did_finish = false;
+    while (!did_finish) {
+        did_finish = true;
+        for (int i = 0; i < Ops.size(); i++) {
+            double temp_eval = 0;
+            if (Ops[i] == '^') {
+                switch (Ops[i])
+                {
+                case '^':
+                    temp_eval = std::powf(Nums[i], Nums[i + 1]);
+                    break;
+                default:
+                    break;
+                }
+                Nums[i] = temp_eval;
+                std::vector<double>::iterator itNums = Nums.begin() + i + 1;
+                Nums.erase(itNums);
+                std::vector<char>::iterator itOps = Ops.begin() + i;
+                Ops.erase(itOps);
+                did_finish = false;
+                break;
+            }
+        }
+
+    }
+    did_finish = false;
     while (!did_finish){
         did_finish = true;
         for (int i = 0; i < Ops.size(); i++) {
