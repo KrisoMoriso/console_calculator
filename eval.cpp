@@ -15,7 +15,7 @@ double eval(std::vector<double>& Nums, std::vector<char>& Ops) {
                 switch (Ops[i])
                 {
                 case '^':
-                    temp_eval = std::powf(Nums[i], Nums[i + 1]);
+                    temp_eval = std::powl(Nums[i], Nums[i + 1]);
                     break;
                 default:
                     break;

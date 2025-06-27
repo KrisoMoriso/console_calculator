@@ -21,6 +21,7 @@ int main()
         tStart = clock();
         eval_parentheses(Nums, Ops, usr_inp);
         double evaluation = eval(Nums, Ops);
+        std::cout.precision(17);
         std::cout << evaluation << '\n';
         Nums.clear();
         Ops.clear();
