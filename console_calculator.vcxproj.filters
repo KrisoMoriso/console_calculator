@@ -21,7 +21,7 @@
     <ClCompile Include="split_string.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="eval_no_parentheses.cpp">
+    <ClCompile Include="eval.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="eval_parentheses.cpp">
@@ -32,7 +32,7 @@
     <ClInclude Include="split_string.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="eval_no_parentheses.h">
+    <ClInclude Include="eval.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="eval_parentheses.h">

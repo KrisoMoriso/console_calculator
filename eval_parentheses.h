@@ -1,4 +1,4 @@
 #pragma once
 #include "split_string.h"
 
-//split_string_return_struct eval_parentheses(split_string_return_struct gotten_struct);
+void eval_parentheses(std::vector<double>& Nums, std::vector<char>& Ops, std::string text_input);

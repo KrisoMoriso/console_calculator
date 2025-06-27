@@ -125,11 +125,11 @@
   <ItemGroup>
     <ClCompile Include="eval_parentheses.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="eval_no_parentheses.cpp" />
+    <ClCompile Include="eval.cpp" />
     <ClCompile Include="split_string.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="eval_no_parentheses.h" />
+    <ClInclude Include="eval.h" />
     <ClInclude Include="eval_parentheses.h" />
     <ClInclude Include="split_string.h" />
   </ItemGroup>
