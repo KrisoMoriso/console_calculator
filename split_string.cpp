@@ -4,7 +4,7 @@
 #include <string>
 
 
-void split_string(std::string usr_inp, std::vector<double>& Nums, std::vector<char>& Ops) {
+void split_string(std::string text_input, std::vector<double>& Nums, std::vector<char>& Ops) {
 
 	
 	
@@ -12,13 +12,13 @@ void split_string(std::string usr_inp, std::vector<double>& Nums, std::vector<ch
 	bool is_last_it_num = false;
 	std::string toDouble = "";
 	double temp_eval = 0;
-	int cos = usr_inp.length();
+	int cos = text_input.length();
 
-	for (int i = 0; i <= usr_inp.length(); i++) {
-		if (usr_inp[i] == '+' or usr_inp[i] == '-' or usr_inp[i] == '*' or usr_inp[i] == '/' or usr_inp[i] == '(' or usr_inp[i] == ')' or usr_inp.length() == i) {
-			if (usr_inp.length() != i)
+	for (int i = 0; i <= text_input.length(); i++) {
+		if (text_input[i] == '+' or text_input[i] == '-' or text_input[i] == '*' or text_input[i] == '/' or text_input.length() == i) {
+			if (text_input.length() != i)
 			{
-				Ops.push_back(usr_inp[i]);
+				Ops.push_back(text_input[i]);
 			}
 
 			if (is_last_it_num) {
@@ -30,7 +30,7 @@ void split_string(std::string usr_inp, std::vector<double>& Nums, std::vector<ch
 		}
 		else {
 			is_last_it_num = true;
-			toDouble.push_back(usr_inp[i]);
+			toDouble.push_back(text_input[i]);
 		}
 	}
 	std::cout;

@@ -10,7 +10,7 @@
 
 int main()
 {
-    std::string usr_inp = "2*3+4";
+    std::string usr_inp = "2*((3+4))";
     clock_t tStart = clock();
 
     std::vector<double> Nums;
@@ -19,12 +19,14 @@ int main()
     while (true){
 
         std::cin >> usr_inp;
-        split_string(usr_inp, Nums, Ops);
+        eval_parentheses(Nums, Ops, usr_inp);
         double evaluation = eval(Nums, Ops);
         std::cout << evaluation << '\n';
         Nums.clear();
         Ops.clear();
     }
+
+
 
     
     printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
