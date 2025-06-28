@@ -1,5 +1,4 @@
 #include <iostream>
-#include <time.h>
 #include <vector>
 #include "split_string.h"
 #include "eval.h"
@@ -10,24 +9,21 @@
 
 int main()
 {
-    std::string usr_inp = "2*((3+4))";
-    clock_t tStart = clock();
+    std::string usr_inp = "2*#0#/#1#";
 
     std::vector<double> Nums;
     std::vector<char> Ops;
-
+    //std::vector<double> stored_nums = { 2.5, 3.5 };
     while (true){
         std::cin >> usr_inp;
-        tStart = clock();
         eval_parentheses(Nums, Ops, usr_inp);
         double evaluation = eval(Nums, Ops);
         std::cout.precision(17);
         std::cout << evaluation << '\n';
         Nums.clear();
         Ops.clear();
-        printf("Time taken: %.2fs\n", (double)(clock() - tStart) / CLOCKS_PER_SEC);
     }
-
+    //split_string(usr_inp, Nums, Ops, stored_nums);
 
 
     
